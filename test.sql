@@ -3,7 +3,7 @@ select * from dual;
 select * from dual;
 select * from dual;
 select * from dual;
-select * from dual;
+select * rom dual;
 select * from dual;
 select * from dual;
 select * from dual;
