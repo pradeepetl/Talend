@@ -1,6 +1,3 @@
-
-
--- 2009
 insert into
    demo_db.public.yellow_taxi 
    SELECT
@@ -121,8 +118,7 @@ insert into
             1, 2, 3, TIP_AMT, TOTAL_AMT, tipbin, VENDOR_NAME, passenger_count, trip_distance, start_lon, start_lat, end_lon, end_lat, payment_type, fare_amt, Rate_code, trip_pickup_datetime, TRIP_DROPOFF_DATETIME
       )
 ;
-
-/********************************************************* Load 2010 data *************************************************************/                                                                   
+                                                                 
                                                                    
 insert into
    demo_db.public.yellow_taxi 
@@ -245,7 +241,6 @@ insert into
       )
 ;
 
-/********************************************************* Load 2011 data *************************************************************/ 
 
 insert into
    demo_db.public.yellow_taxi 
@@ -367,8 +362,7 @@ insert into
             1, 2, 3, TIP_AMOUNT, TOTAL_AMOUNT, tipbin, VENDOR_ID, passenger_count, trip_distance, PICKUP_LONGITUDE, PICKUP_LATITUDE, DROPOFF_LONGITUDE, DROPOFF_LATITUDE, payment_type, FARE_AMOUNT, Rate_code, PICKUP_DATETIME, DROPOFF_DATETIME
       )
 ;
-                                                                      
-/********************************************************* Load 2012 data *************************************************************/                                                                       
+                                                                                                                                        
                                                                       
 insert into
    demo_db.public.yellow_taxi 
@@ -490,8 +484,7 @@ insert into
             1, 2, 3, TIP_AMOUNT, TOTAL_AMOUNT, tipbin, VENDOR_ID, passenger_count, trip_distance, PICKUP_LONGITUDE, PICKUP_LATITUDE, DROPOFF_LONGITUDE, DROPOFF_LATITUDE, payment_type, FARE_AMOUNT, Rate_code, PICKUP_DATETIME, DROPOFF_DATETIME
       )
 ;
-                                                                      
-/********************************************************* Load 2013 data *************************************************************/                                                                       
+                                                                                                                                           
                                                                       
 insert into
    demo_db.public.yellow_taxi 
@@ -614,7 +607,6 @@ insert into
       )
 ;
                                                                       
-/********************************************************* Load 2014 data *************************************************************/  
                                                                       
 insert into
    demo_db.public.yellow_taxi 
@@ -737,8 +729,7 @@ insert into
       )
 ;
                                                                       
-                                                                      
-/********************************************************* Load 2015 data *************************************************************/                                                                       
+                                                                                                                                         
                                                                       
 insert into
    demo_db.public.yellow_taxi 
@@ -861,8 +852,7 @@ insert into
       )
 ;
                                                                       
-                                                                      
-/********************************************************* Load 2016 data *************************************************************/                                                                       
+                                                                                                                                          
                                                                       
 insert into
    demo_db.public.yellow_taxi 
@@ -984,8 +974,7 @@ insert into
             1, 2, 3, TIP_AMOUNT, TOTAL_AMOUNT, tipbin, VENDORID, passenger_count, trip_distance, PICKUP_LONGITUDE, PICKUP_LATITUDE, DROPOFF_LONGITUDE, DROPOFF_LATITUDE, payment_type, FARE_AMOUNT, RATECODEID, TPEP_PICKUP_DATETIME, TPEP_DROPOFF_DATETIME
       )
 ;
-                                                                      
-/********************************************************* Load 2017 data *************************************************************/                                                                       
+                                                                                                                                         
 insert into
    demo_db.public.yellow_taxi 
    SELECT
@@ -1127,8 +1116,7 @@ insert into
          demo_db.public.taxi_zones B 
          ON A.PULocationID = B.LocationID 
          AND A.DOLocationID = B.LocationID;
-                                                                      
-/********************************************************* Load 2018 data *************************************************************/                                                                       
+                                                                                                                                            
                                                                       
 insert into
    demo_db.public.yellow_taxi 
@@ -1271,8 +1259,7 @@ insert into
          demo_db.public.taxi_zones B 
          ON A.PULocationID = B.LocationID 
          AND A.DOLocationID = B.LocationID;
-                                                                      
-/********************************************************* Load 2019 data *************************************************************/                                                                       
+                                                                                                                                         
                                                                       
 insert into
    demo_db.public.yellow_taxi 
@@ -1415,8 +1402,7 @@ insert into
          demo_db.public.taxi_zones B 
          ON A.PULocationID = B.LocationID 
          AND A.DOLocationID = B.LocationID;
-                                                                          
-/********************************************************* Load 2020 data *************************************************************/                                                                          
+                                                                                                                                                   
 insert into
    demo_db.public.yellow_taxi 
    SELECT
