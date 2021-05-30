@@ -840,7 +840,7 @@ insert into
                else
                   'other' 
             end
-            as Tipbin, COUNT(*) Trips, SUM(TIP_AMOUNT) as Tips, ROUND(AVG(trip_distance / timediff(second, TPEP_DROPOFF_DATETIME, TPEP_PICKUP_DATETIME))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((TIP_AMOUNT) / (TOTAL_AMOUNT - TIP_AMOUNT))*100, 3) as TipPercentage 
+            as Tipbin, COUNT(*) Trips, SUM(TIP_AMOUNT) as Tips, ROUND(AVG(trip_distance / timediff(second, TPEP_DROPOFF_DATETIME, TPEP_PICKUP_DATETIME))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((TIP_AMOUNT) / NULLIF((TOTAL_AMOUNT - TIP_AMOUNT),0))*100, 3) as TipPercentage 
          FROM
             DEMO_DB.PUBLIC.YELLOW_TAXI_2015 
          WHERE
@@ -963,7 +963,7 @@ insert into
                else
                   'other' 
             end
-            as Tipbin, COUNT(*) Trips, SUM(TIP_AMOUNT) as Tips, ROUND(AVG(trip_distance / timediff(second, TPEP_DROPOFF_DATETIME, TPEP_PICKUP_DATETIME))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((TIP_AMOUNT) / (TOTAL_AMOUNT - TIP_AMOUNT))*100, 3) as TipPercentage 
+            as Tipbin, COUNT(*) Trips, SUM(TIP_AMOUNT) as Tips, ROUND(AVG(trip_distance / timediff(second, TPEP_DROPOFF_DATETIME, TPEP_PICKUP_DATETIME))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((TIP_AMOUNT) / NULLIF((TOTAL_AMOUNT - TIP_AMOUNT),0))*100, 3) as TipPercentage 
          FROM
             DEMO_DB.PUBLIC.YELLOW_TAXI_2016 
          WHERE
@@ -1101,7 +1101,7 @@ insert into
                else
                   'other' 
             end
-            as Tipbin, COUNT(*) Trips, SUM(tip_amount) as Tips, ROUND(AVG(trip_distance / timediff(second, tpep_dropoff_datetime, tpep_pickup_datetime))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((tip_amount) / (total_amount - tip_amount))*100, 3) as TipPercentage 
+            as Tipbin, COUNT(*) Trips, SUM(tip_amount) as Tips, ROUND(AVG(trip_distance / timediff(second, tpep_dropoff_datetime, tpep_pickup_datetime))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((tip_amount) / NULLIF((TOTAL_AMOUNT - TIP_AMOUNT),0))*100, 3) as TipPercentage 
          FROM
             DEMO_DB.PUBLIC.YELLOW_TAXI_2017 
          WHERE
@@ -1244,7 +1244,7 @@ insert into
                else
                   'other' 
             end
-            as Tipbin, COUNT(*) Trips, SUM(tip_amount) as Tips, ROUND(AVG(trip_distance / timediff(second, tpep_dropoff_datetime, tpep_pickup_datetime))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((tip_amount) / (total_amount - tip_amount))*100, 3) as TipPercentage 
+            as Tipbin, COUNT(*) Trips, SUM(tip_amount) as Tips, ROUND(AVG(trip_distance / timediff(second, tpep_dropoff_datetime, tpep_pickup_datetime))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((tip_amount) / NULLIF((TOTAL_AMOUNT - TIP_AMOUNT),0))*100, 3) as TipPercentage 
          FROM
             DEMO_DB.PUBLIC.YELLOW_TAXI_2018 
          WHERE
@@ -1387,7 +1387,7 @@ insert into
                else
                   'other' 
             end
-            as Tipbin, COUNT(*) Trips, SUM(tip_amount) as Tips, ROUND(AVG(trip_distance / timediff(second, TRY_TO_TIMESTAMP(tpep_dropoff_datetime), TRY_TO_TIMESTAMP(tpep_pickup_datetime)))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((tip_amount) / (total_amount - tip_amount))*100, 3) as TipPercentage 
+            as Tipbin, COUNT(*) Trips, SUM(tip_amount) as Tips, ROUND(AVG(trip_distance / timediff(second, TRY_TO_TIMESTAMP(tpep_dropoff_datetime), TRY_TO_TIMESTAMP(tpep_pickup_datetime)))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((tip_amount) / NULLIF((TOTAL_AMOUNT - TIP_AMOUNT),0))*100, 3) as TipPercentage 
          FROM
             DEMO_DB.PUBLIC.YELLOW_TAXI_2019 
          WHERE
@@ -1529,7 +1529,7 @@ insert into
                else
                   'other' 
             end
-            as Tipbin, COUNT(*) Trips, SUM(tip_amount) as Tips, ROUND(AVG(trip_distance / timediff(second, TRY_TO_TIMESTAMP(tpep_dropoff_datetime), TRY_TO_TIMESTAMP(tpep_pickup_datetime)))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((tip_amount) / (total_amount - tip_amount))*100, 3) as TipPercentage 
+            as Tipbin, COUNT(*) Trips, SUM(tip_amount) as Tips, ROUND(AVG(trip_distance / timediff(second, TRY_TO_TIMESTAMP(tpep_dropoff_datetime), TRY_TO_TIMESTAMP(tpep_pickup_datetime)))*3600, 1) as AverageSpeed, ROUND(AVG(trip_distance), 1) as AverageDistance, ROUND(avg((tip_amount) / NULLIF((TOTAL_AMOUNT - TIP_AMOUNT),0))*100, 3) as TipPercentage 
          FROM
             DEMO_DB.PUBLIC.YELLOW_TAXI_2020 
          WHERE
