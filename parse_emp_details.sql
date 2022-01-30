@@ -1,3 +1,7 @@
+use database demo_db;
+use schema public;
+
+truncate table int_emp_details_avro;
 insert into int_emp_details_avro
  select
         remove_quotes(COLUMN_DATA:registration_dttm),
@@ -16,7 +20,7 @@ insert into int_emp_details_avro
 from DEMO_DB.PUBLIC.STG_EMP_DETAILS_AVRO;
 
 
-
+ truncate table int_emp_details_orc;
  insert into int_emp_details_orc
  select
         remove_quotes(COLUMN_DATA:registration_dttm),
@@ -35,7 +39,7 @@ from DEMO_DB.PUBLIC.STG_EMP_DETAILS_AVRO;
 from DEMO_DB.PUBLIC.STG_EMP_DETAILS_ORC;
 
 
-
+ truncate table int_emp_details_parquet;
  insert into int_emp_details_parquet
  select
         remove_quotes(COLUMN_DATA:registration_dttm),
@@ -53,7 +57,7 @@ from DEMO_DB.PUBLIC.STG_EMP_DETAILS_ORC;
     	remove_quotes(COLUMN_DATA:comments   )  	
 from DEMO_DB.PUBLIC.STG_EMP_DETAILS_PARQUET;
   
-
+truncate table author_details_json;
 insert into author_details_json
 select 
 
