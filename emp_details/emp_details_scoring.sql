@@ -96,9 +96,10 @@ EMP_DETAILS A
 CROSS JOIN
 EMP_DETAILS_RULES B;
 
-CREATE OR replace TABLE table_scores   ASSELECT 'EMP_DETAILS'  TABL_NAME,
-       Round(Sum(record_score)/1000,2) tbl_score,
-       CURRENT_DATE()                  SCORED_DATE
-FROM   (
-              SELECT (registration_dttm+id+first_name+last_name+email+gender+ip_address+cc+country+birthday+salary+title+comments+data_source)\\/14 record_score
-              FROM   emp_details_matrix )
+CREATE OR REPLACE TABLE TABLE_SCORES AS
+select 'EMP_DETAILS' TABL_NAME,round(sum(record_score)/1000,2) tbl_score,CURRENT_DATE() SCORED_DATE FROM
+(
+select
+(REGISTRATION_DTTM+id+first_name+last_name+email+gender+ip_address+cc+country+birthday+salary+title+comments+data_source)/14 record_score
+from EMP_DETAILS_MATRIX
+)
