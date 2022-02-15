@@ -100,5 +100,5 @@ CREATE OR replace TABLE table_scores   ASSELECT 'EMP_DETAILS'  TABL_NAME,
        Round(Sum(record_score)/1000,2) tbl_score,
        CURRENT_DATE()                  SCORED_DATE
 FROM   (
-              SELECT (registration_dttm+id+first_name+last_name+email+gender+ip_address+cc+country+birthday+salary+title+comments+data_source)/14 record_score
+              SELECT (registration_dttm+id+first_name+last_name+email+gender+ip_address+cc+country+birthday+salary+title+comments+data_source)\\/14 record_score
               FROM   emp_details_matrix )
