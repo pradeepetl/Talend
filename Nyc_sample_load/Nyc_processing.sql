@@ -1,5 +1,6 @@
 USE DATABASE DEMO_DB;
 USE SCHMEA PUBLIC;
+USE WAREHOUSE DATA_LOAD;
 
 insert into
    demo_db.public.yellow_taxi 
