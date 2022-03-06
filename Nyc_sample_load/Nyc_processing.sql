@@ -1,3 +1,6 @@
+USE DATABASE DEMO_DB;
+USE SCHMEA PUBLIC;
+
 insert into
    demo_db.public.yellow_taxi 
    SELECT
